@@ -5,7 +5,7 @@ import { deleteStreamUser, upsertStreamUser } from "./stream.js";
 
 export const inngest = new Inngest({id: "HireMeet"});
 
-const syncUser = inngest.createFuction(
+const syncUser = inngest.createFunction(
     {id: "sync-user"},
     {event: "clerk/user.created"},
     async ({event}) => {
