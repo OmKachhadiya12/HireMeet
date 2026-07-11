@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from "react-router";
 import { useUser } from "@clerk/clerk-react";
 import { useState } from "react";
-import { useActiveSessions, useCreateSession, useMyRecentSessions } from "../hooks/useSessions";
+import { useActiveSessions, useCreateSession, useMyRecentSessions } from "../hook/useSessions";
 
 import Navbar from "../components/Navbar.jsx";
 import WelcomeSection from "../components/WelcomeSection.jsx";

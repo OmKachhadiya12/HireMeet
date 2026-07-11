@@ -23,10 +23,10 @@ app.use(cors({
 
 app.use(clerkMiddleware());
 
-app.use("/api/inngest",serve({client: inngest},functions));
+app.use("/api/inngest",serve({client: inngest,functions}));
 
 app.use("/api/chat",chatRoutes);
-app.use("/api/session",sessionRoutes);
+app.use("/api/sessions",sessionRoutes);
 
 app.get("/books", (req, res) => {
   res.status(200).json({ msg: "this is the books endpoint" });

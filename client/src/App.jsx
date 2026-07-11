@@ -16,7 +16,6 @@ function App() {
 
   return (
     <>
-      <h1>Welcome to the app</h1>
 
       <Routes>
           <Route path="/" element={!isSignedIn ? <HomePage /> : <Navigate to={"/dashboard"} />} />

@@ -1,7 +1,7 @@
 import { useUser } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import { useEndSession, useJoinSession, useSessionById } from "../hooks/useSessions";
+import { useEndSession, useJoinSession, useSessionById } from "../hook/useSessions";
 import { PROBLEMS } from "../data/problems";
 import { executeCode } from "../lib/piston";
 import Navbar from "../components/Navbar";
@@ -11,7 +11,7 @@ import { Loader2Icon, LogOutIcon, PhoneOffIcon } from "lucide-react";
 import CodeEditorPanel from "../components/CodeEditorPanel";
 import OutputPanel from "../components/OutputPanel";
 
-import useStreamClient from "../hooks/useStreamClient";
+import useStreamClient from "../hook/useStreamClient";
 import { StreamCall, StreamVideo } from "@stream-io/video-react-sdk";
 import VideoCallUI from "../components/VideoCallUI";
 
