@@ -20,7 +20,7 @@
     "express-rate-limit": "^8.5.2",
     "helmet": "^8.3.0",
     "hiremeet": "file:..",
-    "inngest": "^4.12.1",
+    "inngest": "^3.54.2",
     "mongoose": "^8.19.1",
     "stream-chat": "^9.24.0"
   },
