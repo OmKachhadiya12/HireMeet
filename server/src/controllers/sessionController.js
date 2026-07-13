@@ -61,7 +61,7 @@ const getMyRecentSessions = async (req,res) => {
 
         const userId = req.user._id;
 
-        const sessions = (await Session.find({status: "completed", $or: [{host: userId},{participant: userId}]})).sort({createdAt: -1}).limit(20);
+        const sessions = await Session.find({status: "completed", $or: [{host: userId},{participant: userId}]}).sort({createdAt: -1}).limit(20);
 
         res.status(200).json({sessions});
         
@@ -84,7 +84,7 @@ const getSessionById = async (req,res) => {
             return res.status(404).json({message: "Session not found."});
         }
 
-        res.status(200).json(session);
+        res.status(200).json({ session });
         
     } catch (error) {
 
